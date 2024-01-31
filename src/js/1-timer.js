@@ -91,3 +91,4 @@ function stopTimer(difference) {
     clearInterval(intervalId);
   }
 }
+
