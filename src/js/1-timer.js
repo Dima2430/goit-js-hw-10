@@ -8,6 +8,7 @@ import 'izitoast/dist/css/iziToast.min.css';
 
 
 const startButton = document.querySelector('button[data-start]');
+startButton.disabled = true;
 const input = document.querySelector('input');
 const day = document.querySelector('.value[data-days]');
 const hour = document.querySelector('.value[data-hours]');
