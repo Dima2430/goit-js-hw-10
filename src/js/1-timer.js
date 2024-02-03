@@ -44,6 +44,9 @@ const options = {
 flatpickr("#datetime-picker", options);
 
 startButton.addEventListener('click', () => {
+
+if (selectedDate > Date.now() ) {
+   
     startButton.disabled = true;
     input.disabled = true;
     difference = selectedDate - Date.now();
@@ -53,7 +56,16 @@ startButton.addEventListener('click', () => {
     addTime(convertMs(difference));
     stopTimer(difference);
     },1000)
-
+} else {
+   startButton.disabled = true;
+    input.disabled = true;
+    iziToast.show({
+        message: 'Please choose a date in the future',
+        messageColor: '#FFFFFF',
+        backgroundColor: '#B51B1B',
+        position: 'topRight',
+      });
+}
 })
 
 
