@@ -34,7 +34,8 @@ const options = {
         messageColor: '#FFFFFF',
         backgroundColor: '#B51B1B',
         position: 'topRight',
-      });
+   });
+         startButton.disabled = true;
     } else {
       startButton.disabled = false;
      
@@ -44,7 +45,7 @@ const options = {
 flatpickr("#datetime-picker", options);
 
 startButton.addEventListener('click', () => {
-
+  currentDate = Date.now();
 if (selectedDate > Date.now() ) {
    
     startButton.disabled = true;
